@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra y Venta de Ropa Usada</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        header .logo h1 {
+            font-size: 2rem;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .hero {
+            background-color: #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .hero input {
+            padding: 10px;
+            width: 50%;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .products {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+        
+        .product-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .product-card .product-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .product-card .product-price {
+            margin-top: 5px;
+            color: green;
+        }
+        
+        .product-card .add-to-cart {
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Ropa Usada</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sell.html">Vende tu Ropa</a></li>
+                <li><a href="cart.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h2>Encuentra ropa única a precios increíbles</h2>
+        <input type="search" placeholder="Buscar...">
+    </section>
+
+    <section class="products">
+        <h3>Productos Destacados</h3>
+        <div class="product-card">
+            <img src="assets/images/imagen1.jpg" alt="Camisa usada">
+            <p class="product-name">Camisa de Hombre</p>
+            <p class="product-price">$10</p>
+            <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="assets/images/imagen2.jpg" alt="Pantalón usado">
+            <p class="product-name">Pantalón de Mujer</p>
+            <p class="product-price">$15</p>
+            <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ropa Usada. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Producto agregado al carrito');
+            });
+        });
+    </script>
+</body>
+</html>
